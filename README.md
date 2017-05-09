@@ -14,6 +14,8 @@
  specify, e.g., that `pequod` should only check equivalence over
  certain inputs.
 
+### Proving Equivalence
+
 For example, if `pequod` is given the two Java programs:
 
 ```java
@@ -37,6 +39,10 @@ public int
 And a definition of equivalence that specifies that they should only
 be checked on inputs in which `num >= 0`, then `pequod` returns that
 `addDigits0` is equivalent to `addDigits1` under this definition.
+
+### Falsifying Equivalence
+
+BH, DH, QZ: complete
 
 ## Example Usage
 
