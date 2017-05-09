@@ -46,11 +46,20 @@ BH, DH, QZ: complete
 
 ## Building `pequod`
 
-QZ, DH: give commands that are needed
+```
+$ ant clean
+$ ant build
+$ ant BuildJar
+```
 
 ## Using `pequod`
+```
+$ cd jar
+$ java -jar pequod.jar <folderName> <function1> <function2>
+```
+"folderName" is the name of the folder that contains the .class files with the two functions you want to prove equivalent.
 
-QZ, DH: provide example command-line usage
+"function1" and "function2" are the names of two functions you want to prove equivalent.
 
 ## Implementation
 
