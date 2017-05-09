@@ -44,7 +44,11 @@ be checked on inputs in which `num >= 0`, then `pequod` returns that
 
 BH, DH, QZ: complete
 
-## Example Usage
+## Building `pequod`
+
+QZ, DH: give commands that are needed
+
+## Using `pequod`
 
 QZ, DH: provide example command-line usage
 
@@ -75,7 +79,7 @@ support:
 
 * objects
 
-* multiple procedures
+* multiple methods
 
 These limitations are *not* fundamental. If you are interested in
 extending `pequod` to support these features, we are happy to take
