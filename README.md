@@ -1,6 +1,6 @@
 ### Automatic Jave Program Equivalence Verification
  
- 1. PEQUOD is a tool, implemented on Java, for the automatic static verification for checking program equivalence between two 
+ 1. test PEQUOD is a tool, implemented on Java, for the automatic static verification for checking program equivalence between two 
  programs.
  
  2. PEQUOD implemented on [SOOT](https://sable.github.io/soot/) as the intermeida representation for Java program, and 
