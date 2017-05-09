@@ -19,19 +19,15 @@
 For example, if `pequod` is given the two Java programs:
 
 ```java
-public int
-  addDigits0(int num) {
-  int result = num -
-    9 * ((num - 1) / 9);
+public int addDigits0(int num) {
+  int result = num - 9 * ((num - 1) / 9);
   return result; }
 ```
 
 ```java
-public int
-  addDigits1(int num) {
+public int addDigits1(int num) {
   while (num > 9) {
-    num = num / 10 +
-      num % 10; }
+    num = num / 10 + num % 10; }
   return num; }
 }
 ```
