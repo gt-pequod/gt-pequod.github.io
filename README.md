@@ -40,7 +40,7 @@ be checked on inputs in which `num >= 0`, then `pequod` returns that
 
 ## Example Usage
 
-QZ: provide example command-line usage
+QZ, DH: provide example command-line usage
 
 ## Implementation
 
