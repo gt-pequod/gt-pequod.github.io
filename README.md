@@ -1,4 +1,4 @@
-# Automatically Verifying Equivalence of JVM Programs, Using `pequod`
+# Verifying Equivalence of JVM Programs, Using `pequod`
 
  `pequod` is a utility that, given two programs, attempts to determine
  if they are equivalent. In particular,
@@ -50,19 +50,11 @@ performing key tasks. In particular,
 * `pequod` uses the [soot](https://sable.github.io/soot/) to translate a
   given JVM bytecode class into an intermediate representation.
 
-* `pequod` uses the [Z3](https://github.com/Z3Prover/z3) to attempt to
-  synthesize relational invariants that prove the equivalence of given
-  programs, or to generate an input on which they are not equivalent.
+* `pequod` uses the [Z3](https://github.com/Z3Prover/z3) automatic
+  theorem prover to attempt to synthesize relational invariants that
+  prove the equivalence of given programs, or to generate an input on
+  which they are not equivalent.
    
-## Technical References
-
-The design of `pequod` is based on a novel technique for synthesizing
-proofs of program equivalence as _product programs_. A technical
-report of the techniques is available here:
-
-Qi Zhou, David Heath, and William Harris. Completely Automated
-Equivalence Proofs. [arxiv](TODO)
-
 ## Limitations
 
 If `pequod`, given programs `P0` and `P1` returns that they are (not)
@@ -79,6 +71,15 @@ support:
 
 * multiple procedures
 
-These limitations are *not* fundamental*. If you are interested in
+These limitations are *not* fundamental. If you are interested in
 extending `pequod` to support these features, we are happy to take
 pull requests, or to collaborate!
+
+## Technical References
+
+The design of `pequod` is based on a novel technique for synthesizing
+proofs of program equivalence as _product programs_. A technical
+report of the techniques is available here:
+
+Qi Zhou, David Heath, and William Harris. Completely Automated
+Equivalence Proofs. [arxiv](TODO)
