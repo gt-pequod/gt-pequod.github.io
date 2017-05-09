@@ -1,9 +1,9 @@
-# Verifying Equivalence of JVM Programs, Using `pequod`
+# Verifying Equivalence of JVM Programs, Using pequod
 
  `pequod` is a utility that, given two programs, attempts to determine
  if they are equivalent. In particular,
 
- 1. `pequod` takes two programs `P0` and `P1 represented as JVM
+ 1. `pequod` takes two programs `P0` and `P1` represented as JVM
  bytecode classes, with designated entry methods with identical type
  signatures. The classes can be compiled from any source language.
 
@@ -36,7 +36,7 @@ public int
 }
 ```
 
-And a definition of equivalence that specifies that they should only
+and a definition of equivalence that specifies that they should only
 be checked on inputs in which `num >= 0`, then `pequod` returns that
 `addDigits0` is equivalent to `addDigits1` under this definition.
 
@@ -44,7 +44,9 @@ be checked on inputs in which `num >= 0`, then `pequod` returns that
 
 BH, DH, QZ: complete
 
-## Building `pequod`
+## Building pequod
+
+In your local package directory, run the following commands:
 
 ```
 $ ant clean
@@ -52,24 +54,28 @@ $ ant build
 $ ant BuildJar
 ```
 
-## Using `pequod`
-```
+## Using pequod
+
+In your local package directry, run the following commands:
+
+```shell
 $ cd jar
 $ java -jar pequod.jar <folderName> <function1> <function2>
 ```
-"folderName" is the name of the folder that contains the .class files with the two functions you want to prove equivalent.
 
-"function1" and "function2" are the names of two functions you want to prove equivalent.
+where `folderName` contains the class files that contain the two
+methods, and `function1` and `function2` are the names of the target
+methods.
 
 ## Implementation
 
 `pequod` is implemented in Java. It uses several existing tools for
-performing key tasks. In particular,
+performing key program-analysis tasks. In particular,
 
-* `pequod` uses the [soot](https://sable.github.io/soot/) to translate a
+* `pequod` uses the [`soot`](https://sable.github.io/soot/) to translate a
   given JVM bytecode class into an intermediate representation.
 
-* `pequod` uses the [Z3](https://github.com/Z3Prover/z3) automatic
+* `pequod` uses the [`z3`](https://github.com/Z3Prover/z3) automatic
   theorem prover to attempt to synthesize relational invariants that
   prove the equivalence of given programs, or to generate an input on
   which they are not equivalent.
@@ -101,4 +107,4 @@ proofs of program equivalence as _product programs_. A technical
 report of the techniques is available here:
 
 Qi Zhou, David Heath, and William Harris. Completely Automated
-Equivalence Proofs. [arxiv](TODO)
+Equivalence Proofs. [arxiv](BH)
