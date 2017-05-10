@@ -8,8 +8,8 @@
  signatures. The classes can be compiled from any source language.
 
  2. `pequod` attmepts to determine if `P0` and `P1` are equivalent, in
- the sense that for each vector of arguments `A`, if `P0` and `P1`
- both return a value, then the values are equal. `pequod` can take an
+ the sense that for each vector of arguments, if `P0` and `P1` both
+ return a value, then the values are equal. `pequod` can take an
  optional explicit definition of equivalence, which you can use to
  specify, e.g., that `pequod` should only check equivalence over
  certain inputs.
@@ -110,9 +110,7 @@ is fundamental to any equivalence verifier.
 The current public version of `pequod` has been made available
 primarily for public experimentation, and does not support all
 features of the JVM intermediate language. In particular, it does not
-support:
-
-* objects
+support
 
 * multiple methods
 
