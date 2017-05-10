@@ -16,7 +16,9 @@
 
 ### Proving equivalence
 
-For example, if `pequod` is given the two Java programs:
+If `pequod` is given two programs are equivalent, then in many cases
+it will report this fact. For example, if `pequod` is given the two
+Java programs:
 
 ```java
 public int addDigits0(int num) {
@@ -29,7 +31,6 @@ public int addDigits1(int num) {
   while (num > 9) {
     num = num / 10 + num % 10; }
   return num; }
-}
 ```
 
 and a definition of equivalence that specifies that they should only
@@ -38,7 +39,30 @@ be checked on inputs in which `num >= 0`, then `pequod` returns that
 
 ### Falsifying equivalence
 
-BH, DH, QZ: complete
+If `pequod` is given two programs that are not equivalent, then it
+will always eventually report this fact. For example, if `pequod` is
+given the Java method `diff_mag` that, given integers `m` and `n`,
+returns the magnitude of the difference of `m` and `n`:
+
+
+```java
+public int diff_mag(int m, n) {
+  int result = m - n;
+  if (result < 0) result = -1 * result;
+  return result; }
+```
+
+and the Java program `mag_diff` that, given integers `m` and `n`,
+returns the difference of the magnitudes of `m` and `n`:
+
+```java
+public int mag_diff(int m, n) {
+  if (m < 0) m = -1 * m;
+  if (n < 0) n = -1 * n;
+  return m - n; }
+```
+
+then `pequod` returns that the methods are not equivalent.
 
 ## Building pequod
 
