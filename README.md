@@ -92,8 +92,9 @@ methods.
 `pequod` is implemented in Java. It uses several existing tools for
 performing key program-analysis tasks. In particular,
 
-* `pequod` uses the [`soot`](https://sable.github.io/soot/) to translate a
-  given JVM bytecode class into an intermediate representation.
+* `pequod` uses the [`soot`](https://sable.github.io/soot/)
+  program-analysis framework to translate a given JVM bytecode class
+  into an intermediate representation.
 
 * `pequod` uses the [`z3`](https://github.com/Z3Prover/z3) automatic
   theorem prover to attempt to synthesize relational invariants that
