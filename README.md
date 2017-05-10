@@ -14,7 +14,7 @@
  specify, e.g., that `pequod` should only check equivalence over
  certain inputs.
 
-### Proving Equivalence
+### Proving equivalence
 
 For example, if `pequod` is given the two Java programs:
 
@@ -36,7 +36,7 @@ and a definition of equivalence that specifies that they should only
 be checked on inputs in which `num >= 0`, then `pequod` returns that
 `addDigits0` is equivalent to `addDigits1` under this definition.
 
-### Falsifying Equivalence
+### Falsifying equivalence
 
 BH, DH, QZ: complete
 
@@ -103,4 +103,4 @@ proofs of program equivalence as _product programs_. A technical
 report of the techniques is available here:
 
 Qi Zhou, David Heath, and William Harris. Completely Automated
-Equivalence Proofs. [arxiv](BH)
+Equivalence Proofs. [arxiv](http://arxiv.org/abs/1705.03110)
